@@ -8,5 +8,6 @@ describe("api", ()=>{
         const result = await server.get("/health")
         const {statusCode} = result
         expect(statusCode).toBe(200);
+        expect(result.text).toBe("OK!")
     })
 })
